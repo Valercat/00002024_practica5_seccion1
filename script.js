@@ -42,10 +42,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 const {heroes: {batman}} = dc; //extrae el objeto batman
 
-const objeto = {
-    nombre: 'Fran Quesada',
-    edad: 26,
-}
+// const objeto = {
+//     nombre: 'Fran Quesada',
+//     edad: 26,
+// }
 
 //devuelve el mismo objeto
 const objetoCongelado = Object.freeze(objeto); //no se puede modificar
