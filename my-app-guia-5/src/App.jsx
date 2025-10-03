@@ -1,46 +1,54 @@
-import { getImageUrl} from './utils.js'
+import './App.css';
+import { getImageUrl } from './utils.js';
 
-function Avatar() {
-  return (
-<img
-className="avatar"
-src={getImageUrl(person)}
-alt={person.name}
-width={size}
-height={size}
-/>
-  );
-}
-export default function Profile(){
+function Avatar({ person, size }) {
   return (
     <div>
-      <Avatar 
+      <br></br>
+      <img
+        className="avatar"
+        src={getImageUrl(person)}
+        alt={person.name}
+        width={size}
+        height={size}
+      />
+      <br></br>
+      <strong>Nombre:</strong> {person.name}
+      <br></br>
+      <strong>Profesión:</strong> {person.profesion}
+      <br></br>
+      <strong>Premios:</strong> {person.premios}
+      <br></br>
+      <strong>Descubrió:</strong> {person.descubrio}
+    </div>
+  );
+}
+
+export default function Profile() {
+  return (
+    <div>
+      <h2>Cientificos Notables</h2>
+      <Avatar class="avatar-box"
         size={100}
         person={{
-          name: "Jerry",
-          imageId: "YfeOqp2"
+          name: "Maria Skodowska-Curie",
+          imageId: "YfeOqp2",
+          profesion: "Fisica y Quimica",
+          premios: "4(Premio Nobel de Fisica y Premio Nobel de Quimica, Medalla Davy, Medalla Matteucci)",
+          descubrio: "polinio (elemento quimico)"
         }}
       />
-      <Avatar
-        size={80}
+      <Avatar class="avatar-box"
+        size={100}
         person={{
-          name: "Luna",
-          imageId: "OKS67lh"
-        }}
-      />
-      <Avatar
-        size={50}
-        person={{
-          name: "Zoe",
-          imageId: "1bX5QH6"
+          name: "Katsuko Saruhashi",
+          imageId: "OKS67lh",
+          profesion: "Geoquimica",
+          premios: "2(Premio Miyake de geoquimica, Medalla Tanaka)",
+          descubrio: "metodo para medir el dioxido de carbono en el agua de mar"
         }}
       />
     </div>
-  );
-};
-function MyButton(props) {
-  return (
-  <button onClick={props.Fn}>Soy un botón custom y mi cuenta es: {props.count}</button>
   );
 }
 
