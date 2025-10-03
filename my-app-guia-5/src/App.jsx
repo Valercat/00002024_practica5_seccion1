@@ -28,7 +28,7 @@ export default function Profile() {
   return (
     <div>
       <h2>Cientificos Notables</h2>
-      <Avatar class="avatar-box"
+      <Avatar className="avatar-box"
         size={100}
         person={{
           name: "Maria Skodowska-Curie",
@@ -38,7 +38,7 @@ export default function Profile() {
           descubrio: "polinio (elemento quimico)"
         }}
       />
-      <Avatar class="avatar-box"
+      <Avatar className="avatar-box"
         size={100}
         person={{
           name: "Katsuko Saruhashi",
@@ -51,4 +51,3 @@ export default function Profile() {
     </div>
   );
 }
-
